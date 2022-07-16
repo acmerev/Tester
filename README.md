@@ -1,11 +1,11 @@
 # Tester
-A test of my program
+
+## Arrays
+
 ```
 1.- Average Salary Excluding the Minimum and Maximum Salary
 Easy
-
 Add to List
-
 Share
 You are given an array of unique integers salary where salary[i] is the salary of the ith employee.
 Return the average salary of employees excluding the minimum and maximum salary. 
