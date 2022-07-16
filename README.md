@@ -1,6 +1,6 @@
 # Tester
 
-## Arrays 
+## Arrays  Day1
 
 ```
 1.- Average Salary Excluding the Minimum and Maximum Salary
@@ -65,4 +65,26 @@ Input: low = 8, high = 10
 Output: 1
 Explanation: The odd numbers between 8 and 10 are [9].
 
+```
+```javascript
+
+/**
+ * @param {number} low
+ * @param {number} high
+ * @return {number}
+ */
+var countOdds = function(low, high) {
+    
+    contador = 0;
+    for(let i = low; i<=high; i++)
+        {
+            if(i % 2 == 0){
+                continue;
+            }else {
+                contador += 1; 
+            }
+            
+        }
+    return contador;
+};
 ```
