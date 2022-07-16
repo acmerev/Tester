@@ -1,4 +1,4 @@
-# Tester
+# JavaScrip
 
 ## Arrays  Day1
 
