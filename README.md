@@ -4,16 +4,11 @@
 
 ### 1.- Average Salary Excluding the Minimum and Maximum Salary
 
-```
-
 You are given an array of unique integers salary where salary[i] is the salary of the ith employee.
 Return the average salary of employees excluding the minimum and maximum salary. 
 Answers within 10-5 of the actual answer will be accepted.
 
-```
-
  ```
-
 Example 1:
 
 Input: salary = [4000,3000,1000,2000]
@@ -51,12 +46,8 @@ console.log(largestOfFour(arr))
 ```
 ### 2. Count Odd Numbers in an Interval Range
 
-
-```
-
-
 Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).
-```
+
 ```
 Example 1:
 
