@@ -2,8 +2,9 @@
 
 ## Arrays  Day1
 
+### 1.- Average Salary Excluding the Minimum and Maximum Salary
+
 ```
-1.- Average Salary Excluding the Minimum and Maximum Salary
 
 You are given an array of unique integers salary where salary[i] is the salary of the ith employee.
 Return the average salary of employees excluding the minimum and maximum salary. 
@@ -48,8 +49,11 @@ console.log(largestOfFour(arr))
 //largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, //37, 39], [1000, 1001, 857, 1]]);
 
 ```
+### 2. Count Odd Numbers in an Interval Range
+
+
 ```
-2. Count Odd Numbers in an Interval Range
+
 
 Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).
 ```
