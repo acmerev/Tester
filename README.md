@@ -88,7 +88,7 @@ var countOdds = function(low, high) {
     return contador;
 };
 ```
-
+```javascript
 Return Largest Numbers in Arrays
 Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
 
@@ -114,3 +114,6 @@ console.log(largestOfFour([
 [32, 35, 37, 39],
 [1000, 1001, 857, 1], 
 [4, 5, 10, 30]]));
+
+
+```
