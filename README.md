@@ -118,6 +118,13 @@ Recorta una cadena (primer argumento) si es más larga que la longitud máxima p
 
 ```javascript
 
+function truncateString(str, num) {
 
+let str3 = "";
+
+  return str3.concat(str.slice(0,num), "...");
+}
+
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
 
 ```
