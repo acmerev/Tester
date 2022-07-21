@@ -129,3 +129,137 @@ function truncateString(str, num) {
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
 
 ```
+
+
+```javascript
+
+import React from 'react';
+import { nanoid } from 'nanoid'
+
+
+function App() {
+  const [tarea, setTarea] = React.useState('');
+  const [tareas, setTareas] = React.useState([]);
+  const [modoEdicio, setModoEdicion] = React.useState(false);
+  const [idTarea, setIdTarea] = React.useState('');
+
+  const agregarTarea = e => {
+    e.preventDefault();
+    if (!tarea.trim()) {
+      console.log('No se puede agregar una tarea vacia');
+    }
+    console.log(tarea);
+
+    setTareas([
+      ...tareas, {
+        id: nanoid(),
+        nombreTarea: tarea
+      }]);
+
+    setTarea('');
+
+  }
+
+  const eliminarTarea = id => {
+    setTareas(tareas.filter(tarea => tarea.id !== id));
+  }
+
+  const editarTarea = item => {
+    console.log(item);
+    setModoEdicion(true);
+    setTarea(item.nombreTarea);
+    setIdTarea(item.id);
+    
+  }
+
+  const tareaEdicion = e => {
+    e.preventDefault();
+    if (!tarea.trim()) {
+      console.log('No se puede agregar una tarea vacia');
+      return;
+    }
+    
+    setTareas(tareas.map(tarea => {   
+      if (tarea.id === idTarea) {
+        tarea.nombreTarea = tarea.nombreTarea;
+      }
+      return tarea;
+    }
+    ));
+
+    setModoEdicion(false);  
+    setTarea('');
+    setIdTarea('');
+
+  }
+
+
+  return (
+    <div className="conteiner mt-5 ">
+      <h1 className="text-center mx-3"> CRUD Simple </h1>
+      <hr />
+      <div className="row">
+        <div className="col-8">
+          <h4 className="text-center"> Lista de Tareas </h4>
+
+          <ul className="list-group mx-2">
+            {
+              tareas.map(item => (
+                <li className="list-group-item" key={item.id}>
+                  <span className="lead">{item.nombreTarea}</span>
+                  <button
+                    className="btn btn-sm btn-warning float-right"
+                    onClick={() => editarTarea(item)}
+                  >
+                    Editar </button>
+                  <button
+                    className="btn btn-sm btn-danger float-right mx-2"
+                    onClick={() => eliminarTarea(item.id)}
+                  >
+                    Eliminar </button>
+
+                </li>
+              ))
+
+            }
+          </ul>
+
+
+        </div>
+        <div className="col-4">
+          <h4 className="text-center"> 
+          
+         {
+            modoEdicio ? 'Editar Tarea' : 'Agregar Tarea'
+         }
+          
+          </h4>
+          <form className="form-group mx-3" onSubmit={modoEdicio ? tareaEdicion : agregarTarea}>
+            <div className="d-grid gap-2">
+              <input
+                type="text"
+                className="form-control mb-2 "
+                placeholder="Nombre de la Tarea"
+                onChange={(e) => setTarea(e.target.value)}
+                value={tarea}
+              />
+              {
+                modoEdicio ? ( <button className="btn btn-warning btn-block"> Editar </button>) : (
+                  <button className="btn btn-primary btn-block"> Agregar </button>
+                )
+              }
+           
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+```
