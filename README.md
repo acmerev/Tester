@@ -262,7 +262,7 @@ export default App;
 
 ```
 
-Comprende los peligros de usar el código imperativo
+###Comprende los peligros de usar el código imperativo
 La programación funcional es un buen hábito. Mantiene tu código fácil de manejar y evita que tengas errores incómodos. Pero antes de llegar allí, veamos un enfoque imperativo de la programación para destacar dónde pueden tener problemas.
 
 En inglés (y muchos otros idiomas), la tensión imperativa se utiliza para dar órdenes. De forma similar, un estilo imperativo en la programación es aquel que le da a la computadora un conjunto de sentencias para llevar a cabo una tarea.
@@ -284,7 +284,7 @@ Examine el código en el editor. Está utilizando un método que tiene efectos s
 Cambia Window.prototype.tabClose para que elimine la pestaña correcta.
 
 
-```
+```javascript
 // tabs es un arreglo de títulos de cada sitio abierto dentro de la ventana
 const Window = function(tabs) {
   this.tabs = tabs; // Mantenemos un registro del arreglo dentro del objeto
