@@ -112,7 +112,7 @@ largestOfFour([
 
 
 ```
-### Recorta una cadena
+### 4 Recorta una cadena
 
 Recorta una cadena (primer argumento) si es más larga que la longitud máxima proporcionada (segundo argumento). Devuelve la cadena recortada con un ... al final.
 
@@ -262,7 +262,7 @@ export default App;
 
 ```
 
-###Comprende los peligros de usar el código imperativo
+### 5 Comprende los peligros de usar el código imperativo
 La programación funcional es un buen hábito. Mantiene tu código fácil de manejar y evita que tengas errores incómodos. Pero antes de llegar allí, veamos un enfoque imperativo de la programación para destacar dónde pueden tener problemas.
 
 En inglés (y muchos otros idiomas), la tensión imperativa se utiliza para dar órdenes. De forma similar, un estilo imperativo en la programación es aquel que le da a la computadora un conjunto de sentencias para llevar a cabo una tarea.
